@@ -1,0 +1,47 @@
+.menu {
+	margin-top: em(120);
+	margin-bottom: em(120);
+	@include d(s) {
+		margin-top: em(60);
+		margin-bottom: em(60);
+	}
+}
+
+.menu-item {
+	margin-bottom: em(60);
+	h2 {
+		@include type-2(24);
+		margin-bottom: 1em;
+	}
+	li {
+		@include type-1(18);
+		line-height: em(35, 18);
+		span {
+			font-family: $font-2;
+			font-weight: bold;
+			letter-spacing: 0.05em;
+			color: $bege-escuro;
+			display: inline-block;
+			width: em(60);
+			text-align: right;
+			margin-left: em(-70);
+			@include d(s) {
+				width: auto;
+				margin-left: auto;
+			}
+		}
+	}
+	img {
+		border-radius: 50%;
+		border: 10px solid $bege-medio;
+		position: absolute;
+		right: 0;
+		transform: translateY(25%);
+		@include d(l) {
+			right: em(200);
+		}
+		@include d(s) {
+			width: em(150);
+		}
+	}
+}

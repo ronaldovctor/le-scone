@@ -1,0 +1,59 @@
+.intro {
+	margin-top: em(60);
+	@include d(s) {
+		margin-top: em(20);
+	}
+}
+
+.logo {
+	margin-bottom: em(60);
+}
+
+.intro-info {
+	border-right: 2px solid $cinza;
+	max-width: em(320);
+	p {
+		padding-top: em(10);
+		&:first-child {
+			border-bottom: 2px solid $cinza;
+			padding-bottom: em(10);
+		}
+	}
+}
+
+.intro-telefone {
+	color: $bege-escuro;
+	@include d(s) {
+		margin-bottom: em(40);
+	}
+	&::after {
+		content: '/ / / /';
+		display: block;
+		margin-top: 220px;
+		font-size: 220px;
+		letter-spacing: -90px;
+		color: $cinza;
+		@include d(m) {
+			margin-top: 80px;
+			font-size: 160px;
+			letter-spacing: -70px;
+		}
+		@include d(s) {
+			display: none;
+		}
+	}
+}
+
+.aberto {
+	display: inline-block;
+	width: em(12);
+	height: em(12);
+	background: $verde;
+	border-radius: 50%;
+	margin-left: em(20);
+}
+
+.intro-foto {
+	border: 10px solid $bege-medio;
+	width: 100%;
+}

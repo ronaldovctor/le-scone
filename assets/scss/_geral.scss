@@ -1,0 +1,47 @@
+body {
+	background: $bege-claro;
+	border: 10px solid $bege-medio;
+	color: $cinza;
+
+	@include d(s) {
+		border: none;
+	}
+}
+
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+p {
+	@include type-1(18);
+}
+
+.titulo {
+	@include type-1(18);
+	text-transform: uppercase;
+	@include d(s) {
+		margin-bottom: em(40);
+	}
+	position: relative;
+
+	&::after {
+		content: '';
+		display: block;
+		width: 70%;
+		height: 2px;
+		background: $cinza;
+		float: right;
+		margin-top: em(12);
+		@include d(m) {
+			width: 60%;
+		}
+	}
+}
+
+@mixin box-shadow($shadow...) {
+	-webkit-box-shadow: $shadow;
+	-moz-box-shadow: $shadow;
+	box-shadow: $shadow;
+}
